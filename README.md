@@ -1,4 +1,5 @@
 # Metamodelling of Carbon Fluxes from Crop and Grassland Multi-Model Outputs
+[![DOI](https://zenodo.org/badge/1072905453.svg)](https://doi.org/10.5281/zenodo.17849930)
 
 **Authors:** Roland Hollós, N. Zrinyi, Z. Barcza, G. Bellocchi, R. Sándor, J. Ruff, N. Fodor  
 **Affiliations:** Centre for Agricultural Research (HUN-REN), Eötvös Loránd University, Czech Academy of Sciences, INRAE, University of Pécs  
