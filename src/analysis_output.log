@@ -1,0 +1,1066 @@
+nohup: ignoring input
+Loading required package: randomForest
+randomForest 4.7-1.2
+Type rfNews() to see new features/changes/bug fixes.
+Loading required package: xgboost
+Loading required package: ggplot2
+
+Attaching package: ‘ggplot2’
+
+The following object is masked from ‘package:randomForest’:
+
+    margin
+
+Loading required package: patchwork
+Loading required package: openxlsx
+Loading required package: fastshap
+Loading required package: parallel
+Loading required package: reshape2
+[1] "All packages loaded successfully"
+[1] "Loading data..."
+[1] "Creating baseline plots..."
+[1] "================== GPP =================="
+[1] "=============== Site: C1 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 2 )"
+[1] "  Testing years: 2007, 2011"
+[1] "  Total samples: 221"
+[1] "  --- Fold 1 / 2 : test year = 2007 ---"
+[1] "    Training samples: 112 | Test samples: 109"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 89 train / 23 validation (from 112 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 4.9 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.013091
+  Best nrounds: 183
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 89 train / 23 validation (from 112 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 4.4 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.013082
+  Best nrounds: 239
+  Retraining on full training data...
+[1] "  --- Fold 2 / 2 : test year = 2011 ---"
+[1] "    Training samples: 109 | Test samples: 112"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 2 folds:"
+[1] "    RMSE: BEST_individual=0.003909 | MMM=0.002877 | MLR=0.004568 | RF=0.004538 | XGB=0.010705 | XGB+=0.010666"
+[1] "=============== Site: C2 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 5 )"
+[1] "  Testing years: 2008, 2009, 2010, 2011, 2012"
+[1] "  Total samples: 1791"
+[1] "  --- Fold 1 / 5 : test year = 2008 ---"
+[1] "    Training samples: 1428 | Test samples: 363"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 1142 train / 286 validation (from 1428 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 5.3 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.002818
+  Best nrounds: 124
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 1142 train / 286 validation (from 1428 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 5.4 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.002802
+  Best nrounds: 147
+  Retraining on full training data...
+[1] "  --- Fold 2 / 5 : test year = 2009 ---"
+[1] "    Training samples: 1426 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 5 : test year = 2010 ---"
+[1] "    Training samples: 1426 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 5 : test year = 2011 ---"
+[1] "    Training samples: 1456 | Test samples: 335"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 5 / 5 : test year = 2012 ---"
+[1] "    Training samples: 1428 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 5 folds:"
+[1] "    RMSE: BEST_individual=0.004137 | MMM=0.002857 | MLR=0.002625 | RF=0.002688 | XGB=0.002996 | XGB+=0.002957"
+[1] "=============== Site: G3 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 9 )"
+[1] "  Testing years: 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011"
+[1] "  Total samples: 3281"
+[1] "  --- Fold 1 / 9 : test year = 2003 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 584 validation (from 2916 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 6.5 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.002251
+  Best nrounds: 141
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 584 validation (from 2916 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 6.5 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.002248
+  Best nrounds: 118
+  Retraining on full training data...
+[1] "  --- Fold 2 / 9 : test year = 2004 ---"
+[1] "    Training samples: 2918 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 9 : test year = 2005 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 9 : test year = 2006 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 5 / 9 : test year = 2007 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 6 / 9 : test year = 2008 ---"
+[1] "    Training samples: 2918 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 7 / 9 : test year = 2009 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 8 / 9 : test year = 2010 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 9 / 9 : test year = 2011 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 9 folds:"
+[1] "    RMSE: BEST_individual=0.004583 | MMM=0.002864 | MLR=0.002262 | RF=0.002176 | XGB=0.002419 | XGB+=0.002401"
+[1] "=============== Site: G4 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 9 )"
+[1] "  Testing years: 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010"
+[1] "  Total samples: 3280"
+[1] "  --- Fold 1 / 9 : test year = 2002 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 583 validation (from 2915 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 6.0 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.002224
+  Best nrounds: 211
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 583 validation (from 2915 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 6.0 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.002218
+  Best nrounds: 194
+  Retraining on full training data...
+[1] "  --- Fold 2 / 9 : test year = 2003 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 9 : test year = 2004 ---"
+[1] "    Training samples: 2917 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 9 : test year = 2005 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 5 / 9 : test year = 2006 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 6 / 9 : test year = 2007 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 7 / 9 : test year = 2008 ---"
+[1] "    Training samples: 2917 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 8 / 9 : test year = 2009 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 9 / 9 : test year = 2010 ---"
+[1] "    Training samples: 2916 | Test samples: 364"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 9 folds:"
+[1] "    RMSE: BEST_individual=0.002799 | MMM=0.002946 | MLR=0.002811 | RF=0.00279 | XGB=0.002911 | XGB+=0.002924"
+[1] "Results saved to: Stage3_GPP_results.xlsx"
+[1] "================== RECO =================="
+[1] "=============== Site: C1 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 2 )"
+[1] "  Testing years: 2007, 2011"
+[1] "  Total samples: 213"
+[1] "  --- Fold 1 / 2 : test year = 2007 ---"
+[1] "    Training samples: 108 | Test samples: 105"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 86 train / 22 validation (from 108 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 7.1 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.012390
+  Best nrounds: 145
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 86 train / 22 validation (from 108 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 5.7 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.012382
+  Best nrounds: 118
+  Retraining on full training data...
+[1] "  --- Fold 2 / 2 : test year = 2011 ---"
+[1] "    Training samples: 105 | Test samples: 108"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 2 folds:"
+[1] "    RMSE: BEST_individual=0.002689 | MMM=0.001575 | MLR=0.003041 | RF=0.001669 | XGB=0.010209 | XGB+=0.010218"
+[1] "=============== Site: C2 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 4 )"
+[1] "  Testing years: 2008, 2009, 2011, 2012"
+[1] "  Total samples: 895"
+[1] "  --- Fold 1 / 4 : test year = 2008 ---"
+[1] "    Training samples: 644 | Test samples: 251"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 515 train / 129 validation (from 644 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 4.9 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.002747
+  Best nrounds: 143
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 515 train / 129 validation (from 644 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 5.8 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.002749
+  Best nrounds: 139
+  Retraining on full training data...
+[1] "  --- Fold 2 / 4 : test year = 2009 ---"
+[1] "    Training samples: 686 | Test samples: 209"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 4 : test year = 2011 ---"
+[1] "    Training samples: 652 | Test samples: 243"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 4 : test year = 2012 ---"
+[1] "    Training samples: 703 | Test samples: 192"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 4 folds:"
+[1] "    RMSE: BEST_individual=0.002522 | MMM=0.002094 | MLR=0.002843 | RF=0.001676 | XGB=0.002752 | XGB+=0.002726"
+[1] "=============== Site: C3 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 2 )"
+[1] "  Testing years: 2007, 2008"
+[1] "  Total samples: 44"
+[1] "  --- Fold 1 / 2 : test year = 2007 ---"
+[1] "    Training samples: 28 | Test samples: 16"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 22 train / 6 validation (from 28 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 5.3 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.047290
+  Best nrounds: 557
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 22 train / 6 validation (from 28 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 6.8 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.047290
+  Best nrounds: 533
+  Retraining on full training data...
+[1] "  --- Fold 2 / 2 : test year = 2008 ---"
+[1] "    Training samples: 16 | Test samples: 28"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 2 folds:"
+[1] "    RMSE: BEST_individual=0.000645 | MMM=0.000389 | MLR=0.000694 | RF=0.000331 | XGB=0.050977 | XGB+=0.050977"
+[1] "=============== Site: G3 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 9 )"
+[1] "  Testing years: 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011"
+[1] "  Total samples: 3281"
+[1] "  --- Fold 1 / 9 : test year = 2003 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 584 validation (from 2916 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 7.0 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.001826
+  Best nrounds: 203
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 584 validation (from 2916 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 9.9 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.001817
+  Best nrounds: 203
+  Retraining on full training data...
+[1] "  --- Fold 2 / 9 : test year = 2004 ---"
+[1] "    Training samples: 2918 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 9 : test year = 2005 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 9 : test year = 2006 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 5 / 9 : test year = 2007 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 6 / 9 : test year = 2008 ---"
+[1] "    Training samples: 2918 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 7 / 9 : test year = 2009 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 8 / 9 : test year = 2010 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 9 / 9 : test year = 2011 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 9 folds:"
+[1] "    RMSE: BEST_individual=0.002317 | MMM=0.002488 | MLR=0.001707 | RF=0.001814 | XGB=0.001904 | XGB+=0.001916"
+[1] "=============== Site: G4 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 9 )"
+[1] "  Testing years: 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010"
+[1] "  Total samples: 3280"
+[1] "  --- Fold 1 / 9 : test year = 2002 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 583 validation (from 2915 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 9.6 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.002002
+  Best nrounds: 219
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 583 validation (from 2915 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 8.1 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.001981
+  Best nrounds: 189
+  Retraining on full training data...
+[1] "  --- Fold 2 / 9 : test year = 2003 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 9 : test year = 2004 ---"
+[1] "    Training samples: 2917 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 9 : test year = 2005 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 5 / 9 : test year = 2006 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 6 / 9 : test year = 2007 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 7 / 9 : test year = 2008 ---"
+[1] "    Training samples: 2917 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 8 / 9 : test year = 2009 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 9 / 9 : test year = 2010 ---"
+[1] "    Training samples: 2916 | Test samples: 364"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 9 folds:"
+[1] "    RMSE: BEST_individual=0.002259 | MMM=0.002495 | MLR=0.002378 | RF=0.002219 | XGB=0.002408 | XGB+=0.002448"
+[1] "Results saved to: Stage3_RECO_results.xlsx"
+[1] "================== NEE =================="
+[1] "=============== Site: C1 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 2 )"
+[1] "  Testing years: 2007, 2011"
+[1] "  Total samples: 221"
+[1] "  --- Fold 1 / 2 : test year = 2007 ---"
+[1] "    Training samples: 112 | Test samples: 109"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 89 train / 23 validation (from 112 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 5.3 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.013169
+  Best nrounds: 118
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 89 train / 23 validation (from 112 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 4.4 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.013056
+  Best nrounds: 163
+  Retraining on full training data...
+[1] "  --- Fold 2 / 2 : test year = 2011 ---"
+[1] "    Training samples: 109 | Test samples: 112"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 2 folds:"
+[1] "    RMSE: BEST_individual=0.003683 | MMM=0.002476 | MLR=0.002506 | RF=0.002862 | XGB=0.010334 | XGB+=0.010219"
+[1] "=============== Site: C2 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 5 )"
+[1] "  Testing years: 2008, 2009, 2010, 2011, 2012"
+[1] "  Total samples: 1789"
+[1] "  --- Fold 1 / 5 : test year = 2008 ---"
+[1] "    Training samples: 1426 | Test samples: 363"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 1140 train / 286 validation (from 1426 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 6.0 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.002940
+  Best nrounds: 184
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 1140 train / 286 validation (from 1426 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 6.0 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.002973
+  Best nrounds: 176
+  Retraining on full training data...
+[1] "  --- Fold 2 / 5 : test year = 2009 ---"
+[1] "    Training samples: 1424 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 5 : test year = 2010 ---"
+[1] "    Training samples: 1424 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 5 : test year = 2011 ---"
+[1] "    Training samples: 1454 | Test samples: 335"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 5 / 5 : test year = 2012 ---"
+[1] "    Training samples: 1428 | Test samples: 361"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 5 folds:"
+[1] "    RMSE: BEST_individual=0.003906 | MMM=0.002229 | MLR=0.002376 | RF=0.002293 | XGB=0.002796 | XGB+=0.002811"
+[1] "=============== Site: G3 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 9 )"
+[1] "  Testing years: 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011"
+[1] "  Total samples: 3281"
+[1] "  --- Fold 1 / 9 : test year = 2003 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 584 validation (from 2916 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 5.6 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.001904
+  Best nrounds: 136
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 584 validation (from 2916 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 6.5 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.001913
+  Best nrounds: 185
+  Retraining on full training data...
+[1] "  --- Fold 2 / 9 : test year = 2004 ---"
+[1] "    Training samples: 2918 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 9 : test year = 2005 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 9 : test year = 2006 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 5 / 9 : test year = 2007 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 6 / 9 : test year = 2008 ---"
+[1] "    Training samples: 2918 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 7 / 9 : test year = 2009 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 8 / 9 : test year = 2010 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 9 / 9 : test year = 2011 ---"
+[1] "    Training samples: 2916 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 9 folds:"
+[1] "    RMSE: BEST_individual=0.002786 | MMM=0.001884 | MLR=0.001822 | RF=0.001718 | XGB=0.001999 | XGB+=0.001997"
+[1] "=============== Site: G4 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 9 )"
+[1] "  Testing years: 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010"
+[1] "  Total samples: 3280"
+[1] "  --- Fold 1 / 9 : test year = 2002 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 583 validation (from 2915 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 5.6 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.001793
+  Best nrounds: 169
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 2332 train / 583 validation (from 2915 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 5.8 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 0.001786
+  Best nrounds: 128
+  Retraining on full training data...
+[1] "  --- Fold 2 / 9 : test year = 2003 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 9 : test year = 2004 ---"
+[1] "    Training samples: 2917 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 9 : test year = 2005 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 5 / 9 : test year = 2006 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 6 / 9 : test year = 2007 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 7 / 9 : test year = 2008 ---"
+[1] "    Training samples: 2917 | Test samples: 363"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 8 / 9 : test year = 2009 ---"
+[1] "    Training samples: 2915 | Test samples: 365"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 9 / 9 : test year = 2010 ---"
+[1] "    Training samples: 2916 | Test samples: 364"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 9 folds:"
+[1] "    RMSE: BEST_individual=0.00247 | MMM=0.001953 | MLR=0.001796 | RF=0.001696 | XGB=0.00197 | XGB+=0.001982"
+[1] "Results saved to: Stage3_NEE_results.xlsx"
+[1] "================== N2O =================="
+[1] "=============== Site: C1 ====================="
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 51 train / 13 validation (from 64 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 4.6 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 341.789193
+  Best nrounds: 14
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 51 train / 13 validation (from 64 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 4.7 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 319.411059
+  Best nrounds: 103
+  Retraining on full training data...
+[1] "  Test set performance (RMSE):"
+[1] "     BEST_individual: 1235.873969 | MMM: 1031.446061 | MLR: 1558.214395 | RF: 1030.211306 | XGB: 950.317984 | XGB+: 994.928301"
+[1] "=============== Site: C2 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 4 )"
+[1] "  Testing years: 2008, 2009, 2011, 2012"
+[1] "  Total samples: 428"
+[1] "  --- Fold 1 / 4 : test year = 2008 ---"
+[1] "    Training samples: 213 | Test samples: 215"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 170 train / 43 validation (from 213 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 5.7 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 313.449773
+  Best nrounds: 106
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 170 train / 43 validation (from 213 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 6.1 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 330.218962
+  Best nrounds: 103
+  Retraining on full training data...
+[1] "  --- Fold 2 / 4 : test year = 2009 ---"
+[1] "    Training samples: 239 | Test samples: 189"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 4 : test year = 2011 ---"
+[1] "    Training samples: 419 | Test samples: 9"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 4 : test year = 2012 ---"
+[1] "    Training samples: 413 | Test samples: 15"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 4 folds:"
+[1] "    RMSE: BEST_individual=1288.48662 | MMM=931.022626 | MLR=2171.001064 | RF=1254.486272 | XGB=1091.278821 | XGB+=1280.948914"
+[1] "=============== Site: C3 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 3 )"
+[1] "  Testing years: 2007, 2008, 2009"
+[1] "  Total samples: 84"
+[1] "  --- Fold 1 / 3 : test year = 2007 ---"
+[1] "    Training samples: 63 | Test samples: 21"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 50 train / 13 validation (from 63 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 6.0 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 132.503814
+  Best nrounds: 362
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 50 train / 13 validation (from 63 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 8.5 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 130.246722
+  Best nrounds: 997
+  Retraining on full training data...
+[1] "  --- Fold 2 / 3 : test year = 2008 ---"
+[1] "    Training samples: 35 | Test samples: 49"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 3 : test year = 2009 ---"
+[1] "    Training samples: 70 | Test samples: 14"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 3 folds:"
+[1] "    RMSE: BEST_individual=1534.177953 | MMM=749.107889 | MLR=790.214869 | RF=239.775982 | XGB=270.449258 | XGB+=261.784026"
+[1] "=============== Site: G3 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 5 )"
+[1] "  Testing years: 2008, 2009, 2010, 2011, 2012"
+[1] "  Total samples: 938"
+[1] "  --- Fold 1 / 5 : test year = 2008 ---"
+[1] "    Training samples: 752 | Test samples: 186"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 601 train / 151 validation (from 752 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 7.7 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 932.243440
+  Best nrounds: 57
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 601 train / 151 validation (from 752 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 6.0 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 989.486506
+  Best nrounds: 92
+  Retraining on full training data...
+[1] "  --- Fold 2 / 5 : test year = 2009 ---"
+[1] "    Training samples: 836 | Test samples: 102"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 5 : test year = 2010 ---"
+[1] "    Training samples: 680 | Test samples: 258"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 5 : test year = 2011 ---"
+[1] "    Training samples: 743 | Test samples: 195"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 5 / 5 : test year = 2012 ---"
+[1] "    Training samples: 741 | Test samples: 197"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 5 folds:"
+[1] "    RMSE: BEST_individual=11397.770769 | MMM=2080.239669 | MLR=2128.186789 | RF=2262.366383 | XGB=2150.546492 | XGB+=2282.558496"
+[1] "=============== Site: G4 ====================="
+[1] "  Validation: Leave-One-Year-Out (k-fold, k = 5 )"
+[1] "  Testing years: 2006, 2007, 2008, 2009, 2010"
+[1] "  Total samples: 271"
+[1] "  --- Fold 1 / 5 : test year = 2006 ---"
+[1] "    Training samples: 247 | Test samples: 24"
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 197 train / 50 validation (from 247 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 4.4 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 3529.215038
+  Best nrounds: 10
+  Retraining on full training data...
+[1] "    Training XGBoost+ model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+  Tuning split: 197 train / 50 validation (from 247 training samples)
+  Generating 50 hyperparameter sets...
+  Evaluating 50 parameter sets with 15 cores...
+  Each evaluation trains up to 1000 rounds with early stopping
+  Completed in 4.2 seconds
+  Found best from 50 valid evaluations
+  Best validation RMSE: 3393.123111
+  Best nrounds: 9
+  Retraining on full training data...
+[1] "  --- Fold 2 / 5 : test year = 2007 ---"
+[1] "    Training samples: 204 | Test samples: 67"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 3 / 5 : test year = 2008 ---"
+[1] "    Training samples: 188 | Test samples: 83"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 4 / 5 : test year = 2009 ---"
+[1] "    Training samples: 211 | Test samples: 60"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  --- Fold 5 / 5 : test year = 2010 ---"
+[1] "    Training samples: 234 | Test samples: 37"
+[1] "    Training XGBoost model..."
+Setting up data...
+[1] "    Training XGBoost+ model..."
+Setting up data...
+[1] "  Averaged performance across 5 folds:"
+[1] "    RMSE: BEST_individual=18843.593433 | MMM=4892.993337 | MLR=6839.734319 | RF=5260.943573 | XGB=4812.156388 | XGB+=4983.438354"
+[1] "Results saved to: Stage3_N2O_results.xlsx"
+[1] "================== Yield =================="
+[1] "=============== Site: C1 ====================="
+[1] "    Training XGBoost model..."
+XGBoost hyperparameter search: 50 evaluations
+Setting up data...
+Error in xgb.DMatrix(Xva, label = yva) : 
+  REAL() can only be applied to a 'numeric', not a 'logical'
+Calls: perform_analysis_for_variables -> get_xgb -> xgb.DMatrix
+In addition: There were 21 warnings (use warnings() to see them)
+Execution halted
